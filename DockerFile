@@ -1,0 +1,6 @@
+FROM debian:buster-slim
+
+WORKDIR /go/src/app
+COPY tanzi1997 .
+
+CMD ["tanzi1997"]

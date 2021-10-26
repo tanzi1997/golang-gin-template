@@ -1,4 +1,4 @@
-module tanzi1997
+module golang-gin-template
 
 go 1.17
 

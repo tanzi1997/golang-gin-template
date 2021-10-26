@@ -1,0 +1,15 @@
+# 变量
+BINDIR=bin
+GOBUILD=go build
+
+clean:
+  rm -rf bin
+# linux
+linux-amd64:
+	GOARCH=amd64 GOOS=linux $(GOBUILD) -o $(BINDIR)/$(NAME)-$@
+# macos
+darwin-amd64:
+	GOARCH=amd64 GOOS=darwin $(GOBUILD) -o $(BINDIR)/$(NAME)-$@
+
+source.txt:
+	echo "this is the source" > source.txt

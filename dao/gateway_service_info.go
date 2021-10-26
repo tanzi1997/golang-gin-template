@@ -2,7 +2,7 @@ package dao
 
 import (
 	"fmt"
-	"tanzi1997/model"
+	"golang-gin-template/model"
 )
 
 type GatewayServiceInfoDao struct {

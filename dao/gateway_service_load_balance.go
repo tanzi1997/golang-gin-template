@@ -1,7 +1,7 @@
 package dao
 
 import (
-	"tanzi1997/model"
+	"golang-gin-template/model"
 )
 
 type GatewayServiceLoadBalanceDao struct {

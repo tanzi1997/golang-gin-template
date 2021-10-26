@@ -2,8 +2,8 @@ package dao
 
 import (
 	"fmt"
-	"tanzi1997/common"
-	"tanzi1997/model"
+	"golang-gin-template/common"
+	"golang-gin-template/model"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"

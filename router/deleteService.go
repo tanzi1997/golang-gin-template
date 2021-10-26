@@ -1,8 +1,8 @@
 package router
 
 import (
+	"golang-gin-template/buss"
 	"net/http"
-	"tanzi1997/buss"
 
 	"github.com/gin-gonic/gin"
 )

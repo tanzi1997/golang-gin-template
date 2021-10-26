@@ -1,8 +1,8 @@
 package buss
 
 import (
-	"tanzi1997/dao"
-	"tanzi1997/model"
+	"golang-gin-template/dao"
+	"golang-gin-template/model"
 )
 
 type ServiceBuss struct {

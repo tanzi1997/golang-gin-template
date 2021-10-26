@@ -1,6 +1,6 @@
 FROM debian:buster-slim
 
 WORKDIR /go/src/app
-COPY tanzi1997 .
+COPY golang-gin-template .
 
-CMD ["tanzi1997"]
+CMD ["golang-gin-template"]

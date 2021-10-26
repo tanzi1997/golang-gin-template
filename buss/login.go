@@ -1,9 +1,9 @@
 package buss
 
 import (
-	"tanzi1997/common"
-	"tanzi1997/dao"
-	"tanzi1997/model"
+	"golang-gin-template/common"
+	"golang-gin-template/dao"
+	"golang-gin-template/model"
 )
 
 type AuthBuss struct {

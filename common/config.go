@@ -50,7 +50,7 @@ func ConfigInit() {
 			Username: "root",
 			Password: "",
 			Host:     "127.0.0.1",
-			Dbname:   "tanzi1997",
+			Dbname:   "golang-gin-template",
 			Port:     "3306",
 		},
 	}

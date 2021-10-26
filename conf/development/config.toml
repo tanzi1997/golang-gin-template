@@ -2,7 +2,7 @@
 host = "127.0.0.1"
 port = 3306
 username = "root"
-database = "cutanzi1997"
+database = "cugolang-gin-template"
 
 [redis]
 host = "127.0.0.1"

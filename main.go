@@ -1,10 +1,10 @@
 package main
 
 import (
+	"golang-gin-template/common"
+	"golang-gin-template/dao"
+	"golang-gin-template/router"
 	"net/http"
-	"tanzi1997/common"
-	"tanzi1997/dao"
-	"tanzi1997/router"
 
 	"github.com/gin-gonic/gin"
 )

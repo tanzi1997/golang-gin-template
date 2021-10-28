@@ -3,7 +3,7 @@ NAME=golang-gin-template
 BINDIR=bin
 GOBUILD=go build
 
-all:
+all: linux-amd64 darwin-amd64
 # clean
 clean:
 	rm -rf bin

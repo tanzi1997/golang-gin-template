@@ -3,27 +3,13 @@ package main
 import (
 	"golang-gin-template/common"
 	"golang-gin-template/dao"
+	"golang-gin-template/middleware"
 	"golang-gin-template/router"
 	"net/http"
+	"time"
 
 	"github.com/gin-gonic/gin"
 )
-
-func Cors() gin.HandlerFunc {
-	return func(c *gin.Context) {
-		method := c.Request.Method
-		// 可将将* 替换为指定的域名
-		c.Header("Access-Control-Allow-Origin", "*")
-		c.Header("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE, UPDATE")
-		c.Header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization")
-		c.Header("Access-Control-Expose-Headers", "Content-Length, Access-Control-Allow-Origin, Access-Control-Allow-Headers, Cache-Control, Content-Language, Content-Type")
-		c.Header("Access-Control-Allow-Credentials", "true")
-		if method == "OPTIONS" {
-			c.AbortWithStatus(http.StatusNoContent)
-		}
-		c.Next()
-	}
-}
 
 func main() {
 	// 配置文件初始化
@@ -33,9 +19,16 @@ func main() {
 	// 初始化
 	c := gin.Default()
 	// cors
-	c.Use(Cors())
+	c.Use(middleware.Cors())
 	// 注册router
 	router.InitRouter(c)
 	// 监听端口
-	c.Run(":8180")
+	s := &http.Server{
+		Addr:           ":8080",
+		Handler:        c,
+		ReadTimeout:    10 * time.Second,
+		WriteTimeout:   10 * time.Second,
+		MaxHeaderBytes: 1 << 20,
+	}
+	s.ListenAndServe()
 }
